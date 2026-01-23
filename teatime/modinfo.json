@@ -1,13 +1,13 @@
 {
   "$schema": "https://moddbcdn.vintagestory.at/schema/modinfo.latest.json",
   "type": "Code",
-  "modid": "teatime",
+  "modid": "itsteatime",
   "name": "Teatime",
   "authors": [
     "Fuego Fish"
   ],
-  "description": "To be added",
-  "version": "0.2.0",
+  "description": "A mod that adds tea, from plant to pot.",
+  "version": "0.1.1",
   "dependencies": {
     "game": "1.21.0"
   }
