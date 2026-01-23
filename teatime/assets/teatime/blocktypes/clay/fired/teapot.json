@@ -1,0 +1,92 @@
+{
+	"code": "teapot",
+	
+	"behaviors": [
+		{ "name": "GroundStorable", "properties": { "layout": "SingleCenter" } },
+		{ "name": "HorizontalOrientable", "properties": { "dropBlockFace": "west" } }
+	],
+	"variantgroups": [
+		{ "code": "color", "states": ["blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan" ] },
+		{ "code": "state", "states": ["fired", "cooked"] },
+		{ "code": "side", "loadFromProperties": "game:abstract/horizontalorientation" }
+	],
+
+	"shapebytype": {
+		"*-west": { "base": "teatime:block/clay/teapot-opened-empty" },
+		"*-east": { "base": "teatime:block/clay/teapot-opened-empty", "rotateY": 180 },
+		"*-north": { "base": "teatime:block/clay/teapot-opened-empty", "rotateY": 270 },
+		"*-south": { "base": "teatime:block/clay/teapot-opened-empty", "rotateY": 90 },
+	},
+	
+	"textures": {
+		"transparent": { "base": "block/transparent" },
+		"ceramic": { "base": "game:block/clay/pot/{color}" },
+		"dark": { "base": "game:block/clay/hardened/{color}", "overlays": [ "game:block/clay/overlay/dark" ] },
+		"lid": { "base": "game:block/clay/hardened/{color}", "overlays": [ "game:block/clay/overlay/crock" ] },
+	},
+	
+	"attributes": {
+		"tempGlowMode": 1,
+		"shelvable": true,
+		"mealContainer": true,
+		"attachmentArea": { "x1": 4, "y1": 0, "z1": 4, "x2": 11, "y2": 0, "z2": 11 },
+		"servingCapacity": 6,
+		"storageType": 1,
+		"maxTemperature": 200,
+		"handbook": {
+			"groupBy": ["teapot-*-{state}-west"]
+		}
+	},
+	
+	"attributesByType": {
+		"*-fired-*": {
+			"cookingContainerSlots": 4,
+			"maxContainerSlotStackSize": 6,
+		},
+		"*-cooked-*": {
+			"emptiedBlockCode": "teatime:teapot-{color}-fired",
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		}
+	},
+	"doNotRenderAtLod2": true,
+	"blockmaterial": "Ceramic",
+	"creativeinventory": { "general": ["*-fired-west"], "decorative": ["*-fired-west"], "teatime": ["*-fired-west"] },
+	"replaceable": 400,
+	"resistance": 1.5,
+	"maxStackSizeByType": {
+		"*-cooked": 1,
+		"*": 8
+	},
+	"lightAbsorption": 0,
+	"sounds": {
+		"walk": "walk/stone"
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"sidesolid": {
+		"all": false
+	},
+	"collisionbox": { "x1": 0.28, "y1": 0, "z1": 0.28, "x2": 0.72, "y2": 0.3125, "z2": 0.72 },
+	"selectionbox": { "x1": 0.28, "y1": 0, "z1": 0.28, "x2": 0.72, "y2": 0.3125, "z2": 0.72 },
+	"guiTransform": {
+		"origin": { "x": 0.5, "y": 0.2, "z": 0.5 },
+		"scale": 2
+	},
+	"groundTransform": {
+		"translation": { "x": 0, "y": 0, "z": 0 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 3
+	},
+	"fpHandTransform": {
+		"translation": { "x": 0, "y": 0.1, "z": 0.5 },
+		"scale": 2
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.6799, "y": 0.06, "z": -0.37 },
+		"rotation": { "x": -82, "y": 19, "z": -103 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 0.76
+	}
+}
