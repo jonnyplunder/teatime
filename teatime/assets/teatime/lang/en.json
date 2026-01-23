@@ -1,0 +1,60 @@
+{
+	"game:tabname-teatime": "Teatime",
+	
+	"block-teabush-0": "Dead tea plant",
+	"block-teabush-1": "Growing tea plant",
+	"block-teabush-2": "Growing tea plant",
+	"block-teabush-3": "Growing tea plant",
+	"block-teabush-4": "Mature tea plant",
+	
+	"item-tealeaf-0": "Tea leaf (fresh)",
+	"incontainer-item-tealeaf-0": "Tea leaf (fresh)",
+	"item-tealeaf-1": "Tea leaf (green)",
+	"incontainer-item-tealeaf-1": "Tea leaf (green)",
+	"item-tealeaf-2": "Tea leaf (semi-wilted)",
+	"incontainer-item-tealeaf-2": "Tea leaf (semi-wilted)",
+	"item-tealeaf-3": "Tea leaf (wilted)",
+	"incontainer-item-tealeaf-3": "Tea leaf (wilted)",
+	
+	"item-looseleaf-green": "Loose leaf tea (green)",
+	"incontainer-item-looseleaf-green": "Loose leaf tea (green)",
+	"item-looseleaf-white": "Loose leaf tea (white)",
+	"incontainer-item-looseleaf-white": "Loose leaf tea (white)",
+	"item-looseleaf-yellow": "Loose leaf tea (yellow)",
+	"incontainer-item-looseleaf-yellow": "Loose leaf tea (yellow)",
+	"item-looseleaf-red": "Loose leaf tea (red)",
+	"incontainer-item-looseleaf-red": "Loose leaf tea (red)",
+	"item-looseleaf-black": "Loose leaf tea (black)",
+	"incontainer-item-looseleaf-black": "Loose leaf tea (black)",
+	
+	"item-teaportion-green": "Green tea",
+	"incontainer-item-teaportion-green": "Green tea",
+	"item-teaportion-white": "White tea",
+	"incontainer-item-teaportion-white": "White tea",
+	"item-teaportion-yellow": "Yellow tea",
+	"incontainer-item-teaportion-yellow": "Yellow tea",
+	"item-teaportion-red": "Red tea",
+	"incontainer-item-teaportion-red": "Red tea",
+	"item-teaportion-black": "Black tea",
+	"incontainer-item-teaportion-black": "Black tea",
+	
+	"block-teapot-red-raw": "Raw red clay teapot",
+	"block-teapot-blue-raw": "Raw blue clay teapot",
+	"block-teapot-fire-raw": "Raw fire clay teapot",
+	
+	"block-teapot-blue-fired-*": "Dark brown ceramic teapot",
+	"block-teapot-fire-fired-*": "Fireclay ceramic teapot",
+	"block-teapot-black-fired-*": "Black ceramic teapot",
+	"block-teapot-brown-fired-*": "Brown ceramic teapot",
+	"block-teapot-cream-fired-*": "Cream ceramic teapot",
+	"block-teapot-gray-fired-*": "Gray ceramic teapot",
+	"block-teapot-orange-fired-*": "Orange ceramic teapot",
+	"block-teapot-red-fired-*": "Red ceramic teapot",
+	"block-teapot-tan-fired-*": "Tan ceramic teapot",
+	
+	"teabush-handbook-help-title": "Harvesting: ",
+	"teabush-handbook-help-text": "Tea plants can be harvested repeatedly for their leaves, but taking too many will kill the plant.",
+	
+	"tealeaf-handbook-help-title": "Withering: ",
+	"tealeaf-handbook-help-text": "Tea leaves gradually wither over time, a process that results in different varieties of tea. Roast or steam the leaves to produce loose leaf tea."
+}

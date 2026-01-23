@@ -1,0 +1,154 @@
+{
+	"code": "teabush",
+	"class": "BlockPlant",
+	"entityClassByType": {
+		"*-1": "Transient",
+		"*-2": "Transient",
+		"*-3": "Transient"
+		},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"flora": [ "*" ],
+		"teatime": [ "*" ]
+	},
+	
+	"variantgroups": [
+		{ "code": "state", "states": ["0", "1", "2", "3", "4"] }
+	],
+	
+	"attributes": {
+		"climateColorMapForMap": "climatePlantTint", 
+		"seasonColorMapForMap": "seasonalFoliage",
+		"forageStatAffected": true,
+		"reinforcable": true,
+
+		"transientPropsByType": {
+			"*-1": {
+				"convertFrom": "teatime:teabush-1", 
+				"convertTo": "teatime:teabush-2", 
+				"inGameHours": "120",
+				"resetBelowTemperature": 5,
+				"stopBelowTemperature": 15
+			},
+			"*-2": {
+				"convertFrom": "teatime:teabush-2", 
+				"convertTo": "teatime:teabush-3", 
+				"inGameHours": "84",
+				"resetBelowTemperature": 5,
+				"stopBelowTemperature": 15
+			},
+			"*-3": {
+				"convertFrom": "teatime:teabush-3", 
+				"convertTo": "teatime:teabush-4", 
+				"inGameHours": "48",
+				"resetBelowTemperature": 5,
+				"stopBelowTemperature": 15
+			}
+		},
+		"stackable": true,
+		"handbook": {
+			"groupBy": ["teabush-{state}"],
+			"extraSections": [ { "title": "teabush-handbook-help-title", "text": "teabush-handbook-help-text" } ]
+		}
+	},
+	
+	"shapeByType": {
+		"*-0": { "base": "teatime:block/plant/tea/teabush", "ignoreElements": ["leaves"] },
+		"*": { "base": "teatime:block/plant/tea/teabush" }
+	},
+	"textures": {
+		"leaves": { "base": "teatime:block/plant/tea/leaves-{state}" },
+		"branches": { "base": "teatime:block/plant/tea/branches*" }
+	},
+	"climateColorMap": "climatePlantTint",
+	"seasonColorMap": "seasonalFoliage",
+	"tintindex": 1,
+	"blockmaterial": "Plant",
+	"rainPermeable": false,
+	"resistance": 3.5,
+	"sounds": {
+		"place": "game:block/plant",
+		"break": "game:block/plant",
+		"hit": "game:walk/inside/leafy/bushrustle*",
+		"walk": "game:walk/inside/leafy/bushrustle*"
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"sidesolid": {
+		"all": false
+	},
+	"renderpass": "OpaqueNoCull",
+	"renderAlphaTest": 0.4,
+	"replaceable": 3000,
+	"lightAbsorption": 0,
+	"selectionBoxesByType": {
+		"*-0": [
+			{ "x1": 0.35, "y1": 0, "z1": 0.35,		"x2": 0.65, "y2": 0.8, "z2": 0.65 }
+			],
+		"*": [
+			{ "x1": 0.35, "y1": 0, "z1": 0.35,		"x2": 0.65, "y2": 0.2, "z2": 0.65 },
+			{ "x1": -0.05, "y1": 0.25, "z1": -0.05,		"x2": 1.05, "y2": 0.95, "z2": 1.05 }
+		]
+	},
+	"collisionbox": { "x1": 0.41, "y1": 0, "z1": 0.41,		"x2": 0.59, "y2": 0.75, "z2": 0.59 },
+	"walkspeedmultiplierByType": {
+		"*-0": 0.6,
+		"*-1": 0.5,
+		"*-2": 0.4,
+		"*-3": 0.3,
+		"*-4": 0.2
+		},
+	
+	"behaviorsByType": {
+		"*-1": [{
+			"name": "Harvestable", "properties": { 
+				"harvestTime": 1,
+				"harvestingSound": "game:sounds/walk/inside/leafy/bushrustle*",
+				"harvestedStack": { "type": "item", "code": "teatime:tealeaf-0", "quantity": { "avg": 3.3 }  },
+				"harvestedBlockCode": "teatime:teabush-0",
+				"exchangeBlock": false
+		}
+		}],
+		"*-2": [{
+			"name": "Harvestable", "properties": { 
+				"harvestTime": 1,
+				"harvestingSound": "game:sounds/walk/inside/leafy/bushrustle*",
+				"harvestedStack": { "type": "item", "code": "teatime:tealeaf-0", "quantity": { "avg": 3.3 }  },
+				"harvestedBlockCode": "teatime:teabush-1",
+				"exchangeBlock": false
+		}
+		}],
+		"*-3": [{
+			"name": "Harvestable", "properties": { 
+				"harvestTime": 1,
+				"harvestingSound": "game:sounds/walk/inside/leafy/bushrustle*",
+				"harvestedStack": { "type": "item", "code": "teatime:tealeaf-0", "quantity": { "avg": 3.3 }  },
+				"harvestedBlockCode": "teatime:teabush-2",
+				"exchangeBlock": false
+		}
+		}],
+		"*-4": [{
+			"name": "Harvestable", "properties": { 
+				"harvestTime": 1,
+				"harvestingSound": "game:sounds/walk/inside/leafy/bushrustle*",
+				"harvestedStack": { "type": "item", "code": "teatime:tealeaf-0", "quantity": { "avg": 3.3 }  },
+				"harvestedBlockCode": "teatime:teabush-3",
+				"exchangeBlock": false
+		}
+		}]
+	},
+	
+	"dropsByType": {
+		"*-0": [{ "type": "item", "code": "game:stick", "quantity": { "avg": 1.6 } }],
+		"*-1": [{ "type": "item", "code": "game:stick", "quantity": { "avg": 1.6 } }, { "type": "item", "code": "teatime:tealeaf-2", "quantity": { "avg": 1.6 } }],
+		"*-2": [{ "type": "block", "code": "teatime:teabush-1", "quantity": { "avg": 1.6 } }, { "type": "item", "code": "teatime:tealeaf-1", "quantity": { "avg": 4.4 } }],
+		"*-3": [{ "type": "block", "code": "teatime:teabush-1", "quantity": { "avg": 1.6 } }, { "type": "item", "code": "teatime:tealeaf-1", "quantity": { "avg": 7.3 } }],
+		"*-4": [{ "type": "block", "code": "teatime:teabush-1", "quantity": { "avg": 1.6 } }, { "type": "item", "code": "teatime:tealeaf-1", "quantity": { "avg": 9.7 } }]
+	},
+	
+	"combustibleProps": {
+		"burnTemperature": 600,
+		"burnDuration": 10
+	},
+}

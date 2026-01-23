@@ -1,0 +1,15 @@
+[
+	{
+		"blockCodes": ["teatime:teabush-1", "teatime:teabush-2", "teatime:teabush-3"],
+		"minTemp": 20,
+		"maxTemp": 45,
+		"minRain": 0.4,
+		"maxRain": 0.75,
+		"minFertility": 0.25,
+		"maxFertility": 0.6,
+		"chance": 0.1,
+		"maxForest": 0.9,
+		"maxY": 0.62,
+		"quantity": { "dist": "invexp", "avg": 1, "var": 4 },
+	}
+]

@@ -1,0 +1,35 @@
+[
+  {
+	"code": "swelteredtea",
+	"perishableProps": {
+		"freshHours": { "avg": 1 },
+		"transitionHours": { "avg": 8 },
+		"transitionRatio": 1,
+		"transitionedStack": { "type": "item", "code": "teatime:looseleaf-yellow" }
+	},
+	"shape": { "base": "game:block/food/meal/liquid" },
+	"ingredients": [
+		{ 
+			"code": "leaves", 
+			"validStacks": [ { "type": "item", "code": "teatime:tealeaf-0" } ],
+			"minQuantity": 1,
+			"maxQuantity": 1
+		},
+		{ 
+			"code": "water", 
+			"validStacks": [ 
+				{ 
+					"type": "item", 
+					"code": "game:waterportion", 
+					"shapeElement": "game:bowl/water"
+				}
+			],
+			"minQuantity": 1,
+			"maxQuantity": 1,
+			"portionSizeLitres": 0.1,
+		}
+	],
+	"cooksInto": { "type": "item", "code": "teatime:looseleaf-yellow", "quantity": 1 },
+	"IsFood": true
+  }
+]

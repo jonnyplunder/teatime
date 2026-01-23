@@ -1,0 +1,129 @@
+{
+	"code": "tealeaf",
+	"maxstacksize": 128,
+
+	"variantgroups": [
+		{ "code": "wilt", "states": [ "0", "1", "2", "3" ] }
+	],
+
+	"behaviors": [
+		{ "name": "GroundStorable", "properties": { "layout": "Quadrants", "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 }, "placeRemoveSound": "game:block/plant" } }
+	],
+	"attributes": {
+		"inContainerTexture": { "base": "teatime:block/food/tea/tealeaf", "blendedOverlays": [{ "base": "teatime:block/food/tea/wilt{wilt}" }] },
+		"groundStorageTransform": {
+			"translation": { "x": 0, "y": -0.06, "z": 0 },
+			"scale": 0.89
+		},
+		 "handbook": {
+            "groupBy": [ "tealeaf-{wilt}" ],
+			"extraSections": [ { "title": "tealeaf-handbook-help-title", "text": "tealeaf-handbook-help-text" } ]
+        }
+	},
+	
+	"combustiblePropsByType": {
+		"tealeaf-0": {
+			"meltingPoint": 100,
+			"meltingDuration": 8,
+			"smeltedRatio": 2,
+			"smeltingType": "cook",
+			"smeltedStack": {
+				"type": "item",
+				"code": "teatime:looseleaf-green"
+			},
+			"requiresContainer": false
+		},
+		"tealeaf-1": {
+			"meltingPoint": 100,
+			"meltingDuration": 8,
+			"smeltedRatio": 2,
+			"smeltingType": "cook",
+			"smeltedStack": {
+				"type": "item",
+				"code": "teatime:looseleaf-white"
+			},
+			"requiresContainer": false
+		},
+		"tealeaf-2": {
+			"meltingPoint": 100,
+			"meltingDuration": 8,
+			"smeltedRatio": 2,
+			"smeltingType": "cook",
+			"smeltedStack": {
+				"type": "item",
+				"code": "teatime:looseleaf-red"
+			},
+			"requiresContainer": false
+		},
+		"tealeaf-3": {
+			"meltingPoint": 100,
+			"meltingDuration": 8,
+			"smeltedRatio": 2,
+			"smeltingType": "cook",
+			"smeltedStack": {
+				"type": "item",
+				"code": "teatime:looseleaf-black"
+			},
+			"requiresContainer": false
+		}
+	},
+	
+	"shape": { "base": "teatime:item/food/tea/tealeaf" },
+	"texture": { "base": "teatime:item/food/tea/tealeaf", "blendedOverlays": [{ "base": "teatime:block/food/tea/wilt{wilt}" }] },
+	"creativeinventory": { "general": ["*"], "items": ["*"], "teatime": ["*"] },
+	"materialDensity": 40,
+	"transitionablePropsByType": {
+		"*-0": [{
+			"type": "Perish",
+			"freshHours": { "avg": 5 },
+			"transitionHours": { "avg": 1 },
+			"transitionedStack": { "type": "item", "code": "teatime:tealeaf-1" },
+			"transitionRatio": 1
+		}],
+		"*-1": [{
+			"type": "Perish",
+			"freshHours": { "avg": 11 },
+			"transitionHours": { "avg": 1 },
+			"transitionedStack": { "type": "item", "code": "teatime:tealeaf-2" },
+			"transitionRatio": 1
+		}],
+		"*-2": [{
+			"type": "Perish",
+			"freshHours": { "avg": 23 },
+			"transitionHours": { "avg": 1 },
+			"transitionedStack": { "type": "item", "code": "teatime:tealeaf-3" },
+			"transitionRatio": 1
+		}],
+		"*-3": [{
+			"type": "Perish",
+			"freshHours": { "avg": 48 },
+			"transitionHours": { "avg": 72 },
+			"transitionedStack": { "type": "item", "code": "game:rot" },
+			"transitionRatio": 0.1
+		}]
+	},
+	"guiTransform": {
+		"translation": { "x": 0, "y": 0, "z": -25 },
+		"rotation": { "x": 171, "y": 57, "z": -20 },
+		"origin": { "x": 0.46, "y": 0.11, "z": 0.39 },
+		"scale": 2
+	},
+	"fpHandTransform": {
+		"translation": { "x": 0.1, "y": 0.16, "z": 0 },
+		"rotation": { "x": 37, "y": 77, "z": 2 },
+		"origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+		"scale": 1.95
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.04, "y": -0.6, "z": -0.8 },
+		"rotation": { "x": 119, "y": -7, "z": -72 },
+		"origin": { "x": -0.1, "y": 0.32, "z": 0.82 },
+		"scale": 0.48
+	},
+	"groundTransform": {
+		"translation": { "x": 0, "y": 0, "z": 0 },
+		"rotation": { "x": 0, "y": 0, "z": 0 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 3
+	}
+}
