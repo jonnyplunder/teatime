@@ -1,0 +1,109 @@
+{
+	"code": "teapot",
+	"behaviors": [
+		{ "name": "GroundStorable", "properties": { "layout": "SingleCenter" } },
+		{ "name": "RightClickPickup"},
+		{ "name": "Lockable"}
+	],
+	"heldTpIdleAnimation": "holdbothhands",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"variantgroups": [
+		{ "code": "color", "states": ["blue", "fire", "red" ] },
+		{ "code": "type", "states": ["raw"] },
+	],
+	"shape": { "base": "teatime:block/clay/teapot-opened-empty" },
+	"textures": {
+		"all": { "base": "game:block/clay/{color}clay" }
+	},
+	"attributes": {
+		"tempGlowMode": 1,
+		"shelvable": true,
+		"onTongTransform": {
+			"translation": { "x": -0.63, "y": -0.95, "z": -0.77 },
+			"rotation": { "x": 2, "y": -2, "z": 6 }
+		},
+		"handbook": {
+			"groupBy": ["teatime:teapot-*-{type}"]
+		}
+	},
+	"attributesByType":{
+		"teapot-red-raw":{
+			"beehivekiln":{
+				"0": { "type": "block", "code": "teatime:teapot-tan-fired" },
+				"1": { "type": "block", "code": "teatime:teapot-orange-fired" },
+				"2": { "type": "block", "code": "teatime:teapot-red-fired" },
+				"3": { "type": "block", "code": "teatime:teapot-brown-fired" }
+			}
+		},
+		"teapot-blue-raw":{
+			"beehivekiln":{
+				"0": { "type": "block", "code": "teatime:teapot-cream-fired"},
+				"1": { "type": "block", "code": "teatime:teapot-gray-fired"},
+				"2": { "type": "block", "code": "teatime:teapot-black-fired"},
+				"3": { "type": "block", "code": "teatime:teapot-black-fired"}
+			}
+		},
+		"claypot-fire-raw":{
+			"beehivekiln":{
+				"0": { "type": "block", "code": "teatime:teapot-fire-fired"},
+				"1": { "type": "block", "code": "teatime:teapot-fire-fired"},
+				"2": { "type": "block", "code": "teatime:teapot-fire-fired"},
+				"3": { "type": "block", "code": "teatime:teapot-fire-fired"}
+			}
+		}
+	},
+	"combustiblePropsByType": {
+		"teatime:teapot-fire-raw": {
+			"meltingPoint": 600,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltingType": "fire",
+			"requiresContainer": false,
+			"smeltedStack": { "type": "block",	"code": "teatime:teapot-fire-fired" }
+		},
+		"teatime:teapot-*-raw": {
+			"meltingPoint": 600,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltingType": "fire",
+			"requiresContainer": false,
+			"smeltedStack": { "type": "block",	"code": "teatime:teapot-blue-fired" }
+		}
+	},
+	"doNotRenderAtLod2": true,
+	"blockmaterial": "Ceramic",
+	"creativeinventory": { "general": ["*"], "decorative": ["*"], "teatime": ["*"] },
+	"replaceable": 400,
+	"resistance": 1.5,
+	"maxStackSize": 8,
+	"lightAbsorption": 0,
+	"sounds": {
+		"walk": "walk/stone"
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"sidesolid": {
+		"all": false
+	},
+	"collisionbox": { "x1": 0.28, "y1": 0, "z1": 0.28, "x2": 0.72, "y2": 0.35, "z2": 0.72 },
+	"selectionbox": { "x1": 0.28, "y1": 0, "z1": 0.28, "x2": 0.72, "y2": 0.35, "z2": 0.72 },
+	"guiTransform": {
+		"origin": { "x": 0.5, "y": 0.2, "z": 0.5 },
+		"scale": 2
+	},
+	"groundTransform": {
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 3
+	},
+	"fpHandTransform": {
+		"translation": { "x": 0, "y": 0.1, "z": 0.5 },
+		"scale": 2
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.7, "y": 0.06, "z": -0.47 },
+		"rotation": { "x": -52, "y": 20, "z": -110 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 0.76
+	}
+}
