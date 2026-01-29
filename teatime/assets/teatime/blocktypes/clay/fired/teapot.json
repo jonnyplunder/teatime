@@ -15,7 +15,7 @@
 		"*-west": { "base": "teatime:block/clay/teapot-opened-empty" },
 		"*-east": { "base": "teatime:block/clay/teapot-opened-empty", "rotateY": 180 },
 		"*-north": { "base": "teatime:block/clay/teapot-opened-empty", "rotateY": 270 },
-		"*-south": { "base": "teatime:block/clay/teapot-opened-empty", "rotateY": 90 },
+		"*-south": { "base": "teatime:block/clay/teapot-opened-empty", "rotateY": 90 }
 	},
 	
 	"textures": {
